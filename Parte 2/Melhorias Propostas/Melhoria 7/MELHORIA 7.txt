@@ -1,0 +1,15 @@
+MELHORIA 7: Permitir alteração da quantidade de produtos no carrinho
+
+Título: Adicionar controles de incremento e decremento da quantidade de produtos no checkout
+
+Descrição: Durante o fluxo de compra, o carrinho apresenta os produtos e suas respectivas quantidades, porém não disponibiliza uma forma direta de aumentar ou diminuir a quantidade de unidades.
+O mesmo comportamento foi observado na etapa de overview do checkout.
+
+Situação atual: O usuário consegue visualizar a quantidade do produto, mas não possui controles como + e - para alterá-la durante o fluxo.
+
+Melhoria proposta: Adicionar controles de incremento e decremento ao lado da quantidade de cada produto, permitindo sua alteração diretamente no carrinho.
+Também pode ser avaliada a possibilidade de disponibilizar essa ação na etapa de overview, caso seja compatível com a regra de negócio.
+
+Resultado esperado:
+O usuário deve conseguir aumentar ou reduzir a quantidade de unidades de um produto sem precisar abandonar o checkout e retornar ao catálogo.
+Os valores do carrinho e o total da compra devem ser recalculados conforme a alteração realizada.

@@ -1,0 +1,26 @@
+BUG 4: Checkout permite finalizar compra sem endereço completo
+
+Título:
+Checkout permite finalizar compra de produto físico sem solicitar endereço completo
+
+Descrição:
+Durante o fluxo de compra de um produto físico, o sistema solicita apenas o CEP do consumidor e não coleta as demais informações necessárias de endereço, como rua, número, bairro, cidade ou demais dados aplicáveis.
+
+Mesmo sem essas informações, o sistema permite prosseguir e finalizar a compra.
+
+Passo a passo para reprodução:
+1-Adicionar um produto físico ao carrinho.
+2-Acessar o carrinho.
+3-Iniciar o processo de checkout.
+4-Preencher os dados solicitados.
+5-Informar apenas o CEP no campo relacionado ao endereço.
+6-Prosseguir com o fluxo.
+7-Finalizar a compra.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema permite concluir a compra solicitando apenas o CEP, sem exigir as demais informações necessárias para composição do endereço do consumidor.
+
+Resultado esperado:
+Para compras que necessitem de entrega física, o sistema deve solicitar e validar todas as informações necessárias para identificar corretamente o endereço de entrega antes de permitir a finalização do pedido.

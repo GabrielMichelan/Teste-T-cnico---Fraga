@@ -1,0 +1,175 @@
+-----------------------------------------------USER STORY 1------------------------------------------------------
+
+
+
+CT001: Realizar transferência de duas contas do mesmo titular
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência entre 2 contas da mesma titularidade
+Então a transferência é realizada com sucesso
+
+CT002: Verificar atualização de histórico de transação entre 2 contas pós realização de transferência
+Dado que uma transferência de R$ 50,00 foi realizada entre contas do mesmo titular
+Quando o usuário consultar o histórico das contas
+Então a conta de origem deve apresentar uma saída de R$ 50,00
+E a conta de destino deve apresentar uma entrada de R$ 50,00
+
+
+CT003: Validar informações da transferência no histórico
+Dado que a conta de origem possui saldo de R$ 100,00
+E a conta de destino possui saldo de R$ 50,00
+Quando for realizada uma transferência de R$ 30,00
+Então o saldo da conta de origem deve ser R$ 70,00
+E o saldo da conta de destino deve ser R$ 80,00
+
+
+CT004: Transferir valor maior que zero
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência de R$50,00
+Então a transferência é realizada com sucesso
+
+CT005: Transferir o menor valor permitido
+Dado que o usuário possui duas contas de sua titularidade
+E possui saldo disponível
+Quando realizar uma transferência no valor de R$ 0,01
+Então a transferência deve ser realizada com sucesso
+E os saldos das contas devem ser atualizados corretamente
+
+CT006: Transferir valor com uma casa decimal
+Dado que o usuário possui duas contas de sua titularidade
+Quando realizar uma transferência no valor de R$ 10,5
+Então a transferência deve ser realizada com sucesso
+
+CT007: Transferir valor com exatamente duas casas decimais
+Dado que o usuário possui duas contas de sua titularidade
+Quando realizar uma transferência no valor de R$ 10,99
+Então a transferência deve ser realizada com sucesso
+
+CT008: Proibir transferência de valores menor que zero
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência de R$-1,00
+Então o sistema não deve permitir
+
+CT009: Proibir transferência de valores igual a zero
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência de R$0,00
+Então o sistema não deve permitir
+
+CT010: Proibir transferência de valores entre contas de diferentes titularidades
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência entre contas de diferentes titularidade
+Então o sistema não deve permitir
+
+CT011: Proibir transferência de valores com mais de duas casas decimais
+Dado que um usuário acessou sua conta no banco digital
+Quando é feito a tentativa de realização de transferência de R$3,141
+Então o sistema não deve permitir
+
+CT012: Proibir valor imediatamente abaixo do mínimo permitido
+Dado que o usuário possui duas contas de sua titularidade
+Quando tentar realizar uma transferência de R$ 0,001
+Então o sistema não deve permitir a transferência
+
+
+CT013: Proibir valor negativo com duas casas decimais
+Dado que o usuário possui duas contas de sua titularidade
+Quando tentar realizar uma transferência de R$ -0,01
+Então o sistema não deve permitir a transferência
+
+
+Dúvidas: 
+1- É permitido transferir um valor superior ao saldo disponível da conta de origem? Usuário vai entrar em cheque especial??
+2- É permitido selecionar a mesma conta como origem e destino? Na minha opinião não ficou muito esclarecido se a origem e destino precisam ser contas diferentes.
+
+
+Priorização de 30% do cenários: 
+CT001: Realizar transferência entre duas contas do mesmo titular
+CT003: Validar atualização dos saldos após a transferência
+CT010: Proibir transferência entre contas de diferentes titularidades
+CT011: Proibir transferência com mais de duas casas decimais
+
+Foi escolhido essa priorização de cenários acima pois eles são considerados um dos cenários mais críticos e um dos que mais agregam valores para nossa aplicação e mitigam a maioria dos riscos. Vale lembrar que há outros cenários importantes também da nossa bateria de testes além dos priorizados, mas só foi utilizado apenas 30% deles conforme solicitado.   
+
+
+-------------------------------------------USER STORY 2----------------------------------------------------
+CT001: Realizar pagamento com código de barras válido em dia útil
+Dado que o usuário possui saldo disponível
+E informa um código de barras válido
+E a data atual é um dia útil
+Quando solicitar o pagamento
+Então o pagamento deve ser realizado com sucesso
+
+
+CT002: Debitar o valor do pagamento do saldo da conta
+Dado que o usuário possui saldo de R$ 500,00
+E possui um boleto válido no valor de R$ 100,00
+Quando realizar o pagamento em um dia útil
+Então o saldo da conta deve ser atualizado para R$ 400,00
+
+CT003: Registrar o pagamento no histórico de transações
+Dado que um pagamento foi realizado com sucesso
+Quando o usuário consultar o histórico de transações
+Então o pagamento realizado deve estar registrado no histórico
+
+CT004: Realizar pagamento utilizando exatamente o saldo disponível
+Dado que o usuário possui saldo de R$ 100,00
+E o boleto possui valor de R$ 100,00
+Quando realizar o pagamento em um dia útil
+Então o pagamento deve ser realizado com sucesso
+E o saldo da conta deve ser R$ 0,00
+
+CT005: Impedir pagamento em dia não útil
+Dado que o usuário informou um código de barras válido
+E possui saldo disponível
+Quando tentar realizar o pagamento em um sábado
+Então o sistema não deve permitir o pagamento
+
+
+CT006: Impedir pagamento em feriado
+Dado que o usuário informou um código de barras válido
+Quando tentar realizar o pagamento em um feriado
+Então o sistema não deve permitir o pagamento
+
+
+CT007: Impedir pagamento com código de barras inválido
+Dado que o usuário possui saldo disponível
+Quando informar um código de barras inválido
+Então o sistema não deve realizar o pagamento
+
+CT008: Impedir pagamento sem informar código de barras
+Dado que o usuário acessou a funcionalidade de pagamento
+Quando tentar continuar sem informar o código de barras
+Então o sistema não deve permitir o pagamento
+
+CT009: Impedir pagamento com código de barras incompleto
+Dado que o usuário possui saldo disponível
+Quando informar um código de barras incompleto
+Então o sistema não deve realizar o pagamento
+
+CT010: Impedir pagamento com caracteres inválidos no código de barras
+Dado que o usuário possui saldo disponível
+Quando informar um código de barras contendo caracteres não permitidos
+Então o sistema não deve realizar o pagamento
+
+CT011: Impedir pagamento quando o saldo for insuficiente
+Dado que o usuário possui saldo de R$ 50,00
+E o boleto possui valor de R$ 100,00
+Quando tentar realizar o pagamento
+Então o sistema não deve concluir o pagamento
+
+
+
+Dúvidas: 
+1- O que caracteriza um pagamento inválido? Eu posso invalidar um pagamento de boleto duplicado, invalidar uma pagamento de boleto vencido, invalidar por saldo insuficiente do usuário. Falta especificar as regras de pagamento inválido. 
+2- O sistema vai exibir algum comprovante de pagamento quando realizar o pagamento ?
+3- Vai haver cobrança de juros? O Boleto pode ter vencido, podemos considerar juros?
+4- Vai haver algum horário limite para realizar o pagamento de boleto em dia útil?
+
+Priorização de 30% do cenários: 
+CT001: Realizar pagamento com código de barras válido em dia útil
+CT002: Debitar o valor do pagamento do saldo da conta
+CT007: Impedir pagamento com código de barras inválido
+
+Assim como a user story 1, foi escolhido essa priorização de cenários acima pois eles são considerados um dos cenários mais críticos e um dos que mais agregam valores para nossa aplicação e mitigam a maioria dos riscos. São cenários que já cobrem boa base do que o usuário solicita considerando que só podemos priorizar 30% apenas dos cenários construídos. 
+
+ 
+

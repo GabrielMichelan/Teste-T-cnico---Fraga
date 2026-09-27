@@ -1,0 +1,23 @@
+BUG 5: Compra pode ser finalizada com carrinho vazio
+
+Título:
+Sistema permite prosseguir e finalizar checkout com carrinho vazio
+
+Descrição:
+Durante o fluxo de compra, é possível remover o produto do carrinho e ainda continuar com as etapas do checkout. Mesmo sem nenhum item associado à compra, o sistema permite que o usuário prossiga com o fluxo.
+
+Passo a passo para reprodução:
+1-Adicionar um produto ao carrinho.
+2-Acessar o carrinho.
+3-Remover todos os produtos presentes no carrinho.
+4-Verificar que o carrinho ficou vazio.
+5-Tentar prosseguir com o checkout.
+6-Avançar pelas etapas disponíveis.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema permite que o usuário prossiga com o processo de checkout mesmo sem possuir produtos no carrinho.
+
+Resultado esperado:
+Ao identificar que o carrinho está vazio, o sistema deve impedir o avanço para o checkout e orientar o usuário a adicionar pelo menos um produto antes de continuar.

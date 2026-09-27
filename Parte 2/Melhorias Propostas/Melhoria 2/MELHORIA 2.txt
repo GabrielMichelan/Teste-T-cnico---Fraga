@@ -1,0 +1,14 @@
+MELHORIA 2: Melhorar apresentação da mensagem de credenciais inválidas
+
+
+Título: Melhorar legibilidade e apresentação visual do alerta de credenciais inválidas
+
+Descrição: Durante uma tentativa de login com credenciais incorretas, o sistema apresenta um modal de alerta em vermelho. Entretanto, as informações ficam visualmente muito próximas e pouco organizadas dentro do componente, prejudicando a legibilidade da mensagem.
+
+Situação atual:
+O alerta é apresentado ao usuário, porém a disposição das informações dentro do modal dificulta a leitura e compreensão do erro ocorrido.
+
+Melhoria proposta: Revisar a estilização do modal de erro, melhorando espaçamento, hierarquia visual, alinhamento e legibilidade das informações apresentadas.
+
+Resultado esperado:
+A mensagem de erro deve ser apresentada de maneira clara e facilmente compreensível, permitindo que o usuário identifique rapidamente o problema ocorrido durante a tentativa de login.

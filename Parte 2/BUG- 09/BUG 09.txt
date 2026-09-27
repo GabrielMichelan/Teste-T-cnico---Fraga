@@ -1,0 +1,27 @@
+BUG 09: Horário presente no nome do comprovante diverge do horário exibido no documento
+
+Título: Horário presente no nome do arquivo do comprovante diverge do horário exibido no PDF
+
+Descrição: Durante a geração/download do comprovante de compra, foi identificado que o horário utilizado no nome do arquivo não corresponde ao horário exibido dentro do próprio documento.
+
+O arquivo foi gerado com o nome:
+swag-labs-order-2026-09-26_14-04-46
+Porém, dentro do comprovante, a data do pedido é exibida como September 26, 2026 at 11:04 AM.     
+Existe, portanto, uma diferença de aproximadamente 3 horas entre o horário presente no nome do arquivo e o horário apresentado no conteúdo do comprovante, gerando inconsistência nas informações do mesmo pedido.
+
+Passo a passo para reprodução:
+1. Realizar uma compra na plataforma.
+2. Finalizar o fluxo de checkout.
+3. Gerar ou realizar o download do comprovante do pedido.
+4. Observar o horário presente no nome do arquivo baixado.
+5. Abrir o arquivo PDF.
+6. Comparar o horário do nome do arquivo com o horário apresentado em Order Date.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O nome do arquivo apresenta o horário 14-04-46, enquanto o conteúdo do comprovante apresenta o pedido como realizado às 11:04 AM.     
+
+Resultado esperado: 
+O sistema deve utilizar uma referência de horário consistente na geração do comprovante.
+O horário presente no nome do arquivo deve corresponder ao horário exibido dentro do documento, considerando o mesmo fuso horário e a mesma referência de data/hora utilizada pela aplicação.

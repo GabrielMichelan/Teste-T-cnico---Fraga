@@ -1,0 +1,15 @@
+MELHORIA 1: Implementar funcionalidade de redefinição de senha
+
+
+Título: Implementar funcionalidade de redefinição de senha na tela de login
+
+Descrição: Atualmente, a tela de login não disponibiliza uma funcionalidade para que o usuário consiga recuperar ou redefinir sua senha caso não se lembre das credenciais de acesso.
+
+Situação atual:
+O usuário possui apenas a opção de realizar o login, sem uma alternativa como Forgot Password, Esqueceu sua senha? ou funcionalidade equivalente.
+
+Melhoria proposta:
+Adicionar uma opção de redefinição de senha na tela de login, permitindo que o usuário inicie o processo de recuperação de acesso de forma autônoma.
+
+Resultado esperado:
+O usuário deve conseguir solicitar a redefinição da senha por meio de um fluxo seguro de recuperação de conta, sem depender de intervenção externa.

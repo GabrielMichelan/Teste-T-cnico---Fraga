@@ -1,0 +1,26 @@
+BUG 7: Campos de nome e sobrenome aceitam valores exclusivamente numéricos
+
+Título:
+Checkout permite finalizar compra utilizando valores numéricos como nome e sobrenome
+
+Descrição:
+Durante o preenchimento dos dados pessoais do consumidor no checkout, foi identificado que os campos de nome e sobrenome aceitam valores compostos exclusivamente por números.
+
+Durante os testes, foi possível utilizar 64645 como nome e 64645 como sobrenome e continuar normalmente com o processo de compra.
+
+Passo a passo para reprodução:
+1-Adicionar um produto ao carrinho.
+2-Iniciar o processo de checkout.
+3-No campo de nome, informar 64645.
+4-No campo de sobrenome, informar 64645.
+5-Preencher os demais campos obrigatórios.
+6-Prosseguir com o checkout.
+7-Observar a validação dos campos.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema aceita valores exclusivamente numéricos nos campos de nome e sobrenome e permite prosseguir com a compra.
+
+Resultado esperado:
+Os campos de nome e sobrenome devem possuir validações adequadas para impedir valores claramente incompatíveis com dados de identificação pessoal, como conteúdos exclusivamente numéricos, sem restringir indevidamente caracteres válidos utilizados em nomes reais.

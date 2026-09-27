@@ -1,0 +1,14 @@
+MELHORIA 4: Implementar mecanismo de paginação no Dynamic Catalog
+
+Título: Implementar paginação ou controle de carregamento no Dynamic Catalog - Lazy Load
+
+
+Descrição: Atualmente, a seção Dynamic Catalog - Lazy Load utiliza carregamento contínuo de produtos conforme o usuário realiza scroll pela página.
+Esse comportamento faz com que a navegação possa continuar indefinidamente, dificultando a percepção de quantidade de produtos e tornando a experiência de exploração do catálogo mais extensa.
+
+Situação atual: O usuário continua carregando novos conteúdos conforme realiza scroll, sem um mecanismo claro de divisão ou controle da listagem.
+
+Melhoria proposta: Implementar paginação ou outro mecanismo de controle da navegação, permitindo que o usuário visualize os produtos em conjuntos organizados.
+
+Resultado esperado:
+O usuário deve possuir maior controle sobre a navegação no catálogo, conseguindo identificar e acessar diferentes grupos de produtos de maneira organizada.

@@ -1,0 +1,15 @@
+MELHORIA 3: Implementar autenticação de dois fatores
+
+
+Título: Implementar autenticação de dois fatores para aumentar a segurança da conta
+
+Descrição: Atualmente, o processo de autenticação depende somente das credenciais tradicionais de username e senha.
+Como evolução de segurança, pode ser implementada uma segunda etapa de autenticação para reduzir o risco de acesso indevido em casos de comprometimento das credenciais.
+
+Situação atual: O usuário consegue acessar sua conta utilizando apenas username e senha.
+
+Melhoria proposta:
+Implementar autenticação de dois fatores (2FA), utilizando um segundo mecanismo de confirmação após a validação das credenciais.
+
+Resultado esperado:
+Quando a autenticação de dois fatores estiver habilitada, após informar credenciais válidas o usuário deverá concluir uma segunda etapa de autenticação antes de acessar a conta.

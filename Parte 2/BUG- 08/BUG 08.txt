@@ -1,0 +1,29 @@
+BUG 08: Checkout permite finalizar compra utilizando Postal Code inválido
+
+Título:  
+Checkout permite finalizar compra utilizando Postal Code inválido
+
+Descrição:  
+Durante o preenchimento das informações do consumidor no checkout, foi identificado que o campo de CEP/Postal Code não realiza uma validação adequada do valor informado.
+
+Durante os testes, foi utilizado o valor `dhfgdfhfhghfgfhsgf`, que não corresponde a um formato válido de código postal, e mesmo assim o sistema permitiu que o usuário prosseguisse normalmente com o fluxo e concluísse a compra.
+
+Passo a passo para reprodução:
+1. Adicionar um produto ao carrinho.
+2. Acessar o carrinho.
+3. Iniciar o processo de checkout.
+4. Preencher os demais campos obrigatórios com informações válidas.
+5. No campo de CEP/Postal Code, informar `dhfgdfhfhghfgfhsgf`.
+6. Prosseguir para a próxima etapa.
+7. Finalizar a compra.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:  
+O sistema aceita o valor `dhfgdfhfhghfgfhsgf` no campo de CEP/Postal Code e permite que o usuário prossiga e finalize a compra normalmente.
+
+Resultado esperado:  
+O sistema deve validar o CEP/Postal Code de acordo com o formato aceito para o país selecionado.
+
+Valores que não correspondam a um padrão postal válido devem ser rejeitados, impedindo o avanço do checkout até que um CEP/Postal Code válido seja informado.
+

@@ -1,0 +1,26 @@
+BUG 2: Produtos repetidos durante o Lazy Load do catálogo
+
+Título:
+Produtos são carregados repetidamente durante o scroll no Dynamic Catalog - Lazy Load
+
+Descrição:
+Durante a navegação pela seção Dynamic Catalog - Lazy Load, alguns produtos são exibidos repetidamente conforme o usuário realiza scroll na página. Itens como Sauce Labs Bike Light e Sauce Labs Backpack aparecem diversas vezes, gerando duplicidade de registros durante a navegação.
+
+Passo a passo para reprodução:
+1-Acessar a aplicação.
+2-Navegar até a seção Dynamic Catalog - Lazy Load.
+3-Iniciar o scroll para carregar novos produtos.
+4-Continuar realizando scroll pela listagem.
+5-Observar os produtos exibidos ao longo do carregamento.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+Os mesmos produtos são carregados e exibidos repetidamente diversas vezes durante o scroll.
+
+Exemplos observados:
+Sauce Labs Bike Light;
+Sauce Labs Backpack.
+
+Resultado esperado:
+Cada item do catálogo deve ser exibido conforme a regra definida para a listagem, sem duplicações indevidas durante o carregamento por Lazy Load.

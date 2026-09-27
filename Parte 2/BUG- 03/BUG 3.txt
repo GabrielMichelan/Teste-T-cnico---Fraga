@@ -1,0 +1,27 @@
+BUG 3: Forma de pagamento exibida sem seleção do usuário
+
+Título:
+Checkout exibe pagamento via SauceCard sem solicitar método de pagamento
+
+Descrição:
+Durante o fluxo de checkout, o sistema não apresenta uma etapa para que o usuário selecione ou informe um método de pagamento. Mesmo assim, ao avançar para a etapa de revisão/finalização do pedido, é exibida a informação SauceCard como método de pagamento.
+
+O comportamento apresenta uma informação de pagamento que não foi previamente selecionada nem informada pelo consumidor.
+
+Passo a passo para reprodução:
+1-Adicionar um produto ao carrinho.
+2-Acessar o carrinho.
+3-Iniciar o processo de checkout.
+4-Preencher as informações solicitadas pelo sistema.
+5-Prosseguir para a etapa de revisão do pedido.
+6-Observar a informação apresentada na seção de pagamento.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema exibe SauceCard como informação de pagamento mesmo sem ter solicitado ao usuário a seleção ou o preenchimento de qualquer método de pagamento.
+
+Resultado esperado:
+O checkout deve solicitar ao usuário a seleção ou o preenchimento do método de pagamento antes de apresentar essa informação na revisão do pedido.
+
+Caso exista um método padrão definido pela aplicação, essa regra deve estar claramente apresentada ao usuário durante o fluxo.

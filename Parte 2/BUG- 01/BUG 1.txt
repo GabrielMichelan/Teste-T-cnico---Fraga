@@ -1,0 +1,24 @@
+BUG 1: Campo de username destacado incorretamente ao informar senha inválida
+
+Título
+Campo de username é destacado como inválido quando apenas a senha está incorreta
+
+Descrição:
+Durante a tentativa de login com um username válido e uma senha incorreta, o sistema bloqueia corretamente o acesso devido à senha inválida. Porém, o campo de username também é destacado em vermelho, mesmo estando preenchido corretamente. Esse comportamento pode induzir o usuário a acreditar que existe um problema também no username informado.
+
+Passo a passo para reprodução:
+1-Acessar a tela de login.
+2-Informar um username válido.
+3-Informar uma senha incorreta.
+4-Clicar no botão de login.
+5-Observar os campos destacados após a tentativa de autenticação.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema impede o login corretamente, porém destaca o campo de username em vermelho, mesmo o valor informado estando correto.
+
+Resultado esperado:
+O sistema deve indicar visualmente apenas o campo relacionado ao erro identificado. Caso a senha esteja incorreta, somente o campo de senha deve receber o destaque correspondente, ou a interface deve apresentar um tratamento genérico de credenciais inválidas sem indicar incorretamente um campo válido.
+
+

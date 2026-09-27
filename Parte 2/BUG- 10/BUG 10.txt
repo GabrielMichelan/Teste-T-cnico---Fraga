@@ -1,0 +1,28 @@
+BUG 10: Frontend exibe termos técnicos internos nos nomes e descrições dos produtos
+
+Descrição:
+Durante a navegação pelo catálogo e pelo fluxo de compra, foram identificados termos com aparência de conteúdo técnico ou interno da implementação sendo exibidos diretamente ao consumidor.
+
+Entre os exemplos observados estão:
+carry.allTheThings() na descrição do produto Sauce Labs Backpack, e
+Test.allTheThings() T-Shirt (Red) como nome de produto.
+
+Essas informações aparentam estar relacionadas a nomenclaturas técnicas ou internas da aplicação e não deveriam ser apresentadas ao consumidor final.
+
+Passo a passo para reprodução
+1. Acessar a aplicação.
+2. Navegar até a listagem de produtos.
+3. Localizar o produto Sauce Labs Backpack.
+4. Visualizar sua descrição.
+5. Observar a presença do termo carry.allTheThings().
+6. Retornar à listagem de produtos.
+7. Localizar o item Test.allTheThings() T-Shirt (Red).
+8. Observar a nomenclatura apresentada ao usuário.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema exibe termos com aparência de conteúdo técnico/interno diretamente na interface destinada ao consumidor.
+
+Resultado esperado:
+O frontend deve apresentar apenas nomes e descrições adequados ao usuário final, sem expor nomenclaturas técnicas, identificadores internos, métodos, variáveis ou outros conteúdos relacionados à implementação da aplicação.

@@ -1,0 +1,15 @@
+MELHORIA 6: Adicionar opção nativa de retorno durante a navegação
+
+Título: Disponibilizar opção de retorno para a página anterior nas diferentes áreas da plataforma
+
+Descrição: A aplicação não mantém um padrão de navegação para retorno entre as diferentes seções.
+Na página de detalhes de um produto, por exemplo, existe a opção Back to products. Entretanto, em outras áreas, como seções do catálogo, o usuário não possui uma opção equivalente e precisa utilizar o botão do navegador ou acessar outra opção do menu.
+
+Situação atual:
+Algumas páginas possuem uma ação nativa de retorno, enquanto outras dependem da navegação do navegador ou do menu principal.
+
+Melhoria proposta:
+Padronizar a navegação adicionando uma opção nativa de retorno nas páginas em que o usuário entra em níveis mais específicos da aplicação.
+
+Resultado esperado:
+O usuário deve conseguir retornar de maneira simples à página anterior ou à seção de origem utilizando controles disponibilizados pela própria aplicação.

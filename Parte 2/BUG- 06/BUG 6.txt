@@ -1,0 +1,23 @@
+BUG 6: Checkout aceita CEP incompleto
+
+Título:
+Checkout permite prosseguir utilizando CEP incompleto
+
+Descrição:
+Durante o preenchimento das informações do consumidor, o sistema não valida corretamente o formato do CEP informado. Foi identificado que um CEP incompleto, como 13189-2, é aceito e permite que o usuário continue normalmente com o processo de checkout.
+
+Passo a passo para reprodução:
+1-Adicionar um produto ao carrinho.
+2-Iniciar o fluxo de checkout.
+3-Preencher os campos obrigatórios.
+4-No campo de CEP, informar um valor incompleto, por exemplo: 13189-2.
+5-Clicar na opção para continuar.
+6-Observar o comportamento do sistema.
+
+Ambiente: Windows / Google Chrome
+
+Resultado obtido:
+O sistema aceita o CEP incompleto e permite que o usuário prossiga para as próximas etapas do checkout.
+
+Resultado esperado:
+O sistema deve validar o formato do CEP informado e impedir o avanço do checkout enquanto o valor não estiver em um formato válido.

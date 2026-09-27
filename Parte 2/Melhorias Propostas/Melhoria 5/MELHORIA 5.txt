@@ -1,0 +1,19 @@
+MELHORIA 5: Renomear opção Reset App State
+
+
+Título: Alterar nomenclatura da opção Reset App State para representar melhor sua funcionalidade
+
+Descrição: Ao selecionar a opção Reset App State, foi observado que o sistema remove os produtos presentes no carrinho.
+A nomenclatura atual pode gerar dúvida, pois sugere uma redefinição geral do estado da aplicação, enquanto uma das consequências visíveis para o usuário é a limpeza do carrinho.
+
+Situação atual: O menu apresenta a opção Reset App State, e ao utilizá-la os itens adicionados ao carrinho são removidos.
+
+Melhoria proposta:
+Revisar a nomenclatura da funcionalidade para que comunique claramente ao usuário a ação realizada.
+Exemplos que podem ser avaliados:
+- Reset Cart
+- Clear Cart
+- Remove All Cart Items
+
+Resultado esperado:
+A nomenclatura apresentada deve permitir que o usuário compreenda previamente o efeito da ação antes de executá-la.

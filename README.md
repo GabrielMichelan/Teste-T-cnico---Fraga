@@ -1,4 +1,4 @@
-## Instalação e execução do projeto Cypress
+## Instalação e execução do projeto automação em Cypress
 
 ## Pré-requisitos ##
 - Node.js e npm instalados;

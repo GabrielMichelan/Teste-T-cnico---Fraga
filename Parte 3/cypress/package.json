@@ -11,5 +11,9 @@
     "test:e2e": "cypress run --spec \"e2e/**/*.cy.ts\"",
     "test:com-interface": "cypress run --headed",
     "verificar": "cypress verify"
+  },
+  "devDependencies": {
+    "cypress": "^16.1.0",
+    "typescript": "^7.0.2"
   }
 }

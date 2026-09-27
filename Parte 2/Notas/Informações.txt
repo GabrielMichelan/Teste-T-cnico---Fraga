@@ -33,6 +33,7 @@ Checkout, Catálogo, Login, Comprovante/PDF
 Abordagens utilizadas: Testes funcionais e Testes não funcionais. 
 
 Tempo estimado: 
-Checkout: 1h
-Catálogo: 30min
-Login: 30min
+Login: 15 min
+Catálogo: 20 min
+Carrinho: 15 min
+Checkout: 30 min

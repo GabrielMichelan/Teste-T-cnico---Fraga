@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "cypress run",
+    "test:abrir": "cypress open",
+    "test:crud": "cypress run --spec api/crud.cy.ts",
+    "test:autenticacao": "cypress run --spec api/autenticacao.cy.ts",
+    "test:contrato": "cypress run --spec api/contrato.cy.ts",
+    "test:http": "cypress run --spec api/status-http.cy.ts",
+    "test:login": "cypress run --spec e2e/login.cy.ts",
+    "test:checkout": "cypress run --spec e2e/checkout.cy.ts",
+    "test:e2e": "cypress run --spec \"e2e/**/*.cy.ts\"",
+    "test:com-interface": "cypress run --headed",
+    "verificar": "cypress verify"
+  }
+}

@@ -25,3 +25,7 @@ O nome do arquivo apresenta o horário 14-04-46, enquanto o conteúdo do comprov
 Resultado esperado: 
 O sistema deve utilizar uma referência de horário consistente na geração do comprovante.
 O horário presente no nome do arquivo deve corresponder ao horário exibido dentro do documento, considerando o mesmo fuso horário e a mesma referência de data/hora utilizada pela aplicação.
+
+Severidade: Baixa 
+
+Justificativa: O comprovante continua sendo gerado e os dados principais da compra permanecem disponíveis. A divergência de horário causa inconsistência e pode gerar dúvida em auditoria ou rastreabilidade, mas não compromete o fluxo principal

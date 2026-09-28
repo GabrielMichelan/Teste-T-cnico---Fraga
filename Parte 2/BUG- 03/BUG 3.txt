@@ -23,5 +23,7 @@ O sistema exibe SauceCard como informação de pagamento mesmo sem ter solicitad
 
 Resultado esperado:
 O checkout deve solicitar ao usuário a seleção ou o preenchimento do método de pagamento antes de apresentar essa informação na revisão do pedido.
-
 Caso exista um método padrão definido pela aplicação, essa regra deve estar claramente apresentada ao usuário durante o fluxo.
+
+Severidade: Alta 
+Justificativa: O checkout atribui um método de pagamento sem que o usuário tenha selecionado ou informado qualquer opção. Isso compromete a consistência de uma etapa essencial da compra e pode gerar informações incorretas sobre como a transação foi processada.

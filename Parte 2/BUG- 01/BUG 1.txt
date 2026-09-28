@@ -21,4 +21,8 @@ O sistema impede o login corretamente, porém destaca o campo de username em ver
 Resultado esperado:
 O sistema deve indicar visualmente apenas o campo relacionado ao erro identificado. Caso a senha esteja incorreta, somente o campo de senha deve receber o destaque correspondente, ou a interface deve apresentar um tratamento genérico de credenciais inválidas sem indicar incorretamente um campo válido.
 
+Severidade: Baixa
+Justificativa: O login continua funcionando corretamente ao bloquear a autenticação inválida. O problema está na indicação visual incorreta do campo, podendo confundir o usuário, mas sem quebrar o fluxo de autenticação.
+
+
 

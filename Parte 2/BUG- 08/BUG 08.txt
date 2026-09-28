@@ -27,3 +27,6 @@ O sistema deve validar o CEP/Postal Code de acordo com o formato aceito para o p
 
 Valores que não correspondam a um padrão postal válido devem ser rejeitados, impedindo o avanço do checkout até que um CEP/Postal Code válido seja informado.
 
+Severidade: Média 
+Justificativa: O campo aceita um valor completamente incompatível com um código postal e ainda permite concluir a compra. É uma falha de validação relevante, mas o impacto permanece concentrado na integridade do endereço informado.
+

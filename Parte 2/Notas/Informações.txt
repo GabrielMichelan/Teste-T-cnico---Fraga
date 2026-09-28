@@ -14,9 +14,6 @@
 
 
 
-Áreas testadas: 
-Checkout, Catálogo, Login, Comprovante/PDF
-
 Abordagens utilizadas: Testes funcionais e Testes não funcionais. 
 
 Tempo estimado: 

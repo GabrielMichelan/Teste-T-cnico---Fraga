@@ -24,3 +24,6 @@ Sauce Labs Backpack.
 
 Resultado esperado:
 Cada item do catálogo deve ser exibido conforme a regra definida para a listagem, sem duplicações indevidas durante o carregamento por Lazy Load.
+
+Severidade: Média
+Justificativa: O catálogo continua acessível, porém a repetição contínua de produtos prejudica significativamente a navegação e pode dificultar a descoberta de itens reais. Não bloqueia a compra, mas afeta uma funcionalidade importante da listagem.

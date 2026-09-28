@@ -21,3 +21,6 @@ O sistema permite que o usuário prossiga com o processo de checkout mesmo sem p
 
 Resultado esperado:
 Ao identificar que o carrinho está vazio, o sistema deve impedir o avanço para o checkout e orientar o usuário a adicionar pelo menos um produto antes de continuar.
+
+Severidade: Alta 
+Justificativa: O sistema permite avançar em um fluxo de compra sem existir produto associado ao pedido. Isso quebra uma regra fundamental do checkout e pode gerar pedidos ou transações inconsistentes.

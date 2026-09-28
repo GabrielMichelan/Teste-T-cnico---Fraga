@@ -26,3 +26,6 @@ O sistema exibe termos com aparência de conteúdo técnico/interno diretamente 
 
 Resultado esperado:
 O frontend deve apresentar apenas nomes e descrições adequados ao usuário final, sem expor nomenclaturas técnicas, identificadores internos, métodos, variáveis ou outros conteúdos relacionados à implementação da aplicação.
+
+Severidade: Baixa 
+Justificativa: O problema afeta principalmente apresentação e experiência do usuário. Não impede navegação ou compra. Pode ser mais grave caso os termos revelem informações sensíveis da implementação, mas com o material atual o impacto aparenta ser visual/conteúdo.

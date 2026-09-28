@@ -45,7 +45,7 @@ describe('AC-CONTRATO | Contrato de payload e resposta', () => {
       cy.log(`Status recebido: ${resposta.status}`)
       cy.log(`Resposta: ${JSON.stringify(resposta.body)}`)
 
-      expect(resposta.status).to.be.oneOf([200, 400, 422, 500])
+      expect(resposta.status).to.be.oneOf([400, 422])
     })
   })
 
@@ -64,7 +64,7 @@ describe('AC-CONTRATO | Contrato de payload e resposta', () => {
       cy.log(`Status recebido: ${resposta.status}`)
       cy.log(`Resposta: ${JSON.stringify(resposta.body)}`)
 
-      expect(resposta.status).to.be.oneOf([400, 422, 500])
+      expect(resposta.status).to.be.oneOf([400, 422])
     })
   })
 
@@ -83,7 +83,7 @@ describe('AC-CONTRATO | Contrato de payload e resposta', () => {
       cy.log(`Status recebido: ${resposta.status}`)
       cy.log(`Resposta: ${JSON.stringify(resposta.body)}`)
 
-      expect(resposta.status).to.be.oneOf([400, 422, 500])
+      expect(resposta.status).to.be.oneOf([400, 422])
     })
   })
 

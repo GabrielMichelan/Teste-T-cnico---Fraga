@@ -24,3 +24,6 @@ O sistema aceita valores exclusivamente numéricos nos campos de nome e sobrenom
 
 Resultado esperado:
 Os campos de nome e sobrenome devem possuir validações adequadas para impedir valores claramente incompatíveis com dados de identificação pessoal, como conteúdos exclusivamente numéricos, sem restringir indevidamente caracteres válidos utilizados em nomes reais.
+
+Severidade: Média
+Justificativa: O sistema permite dados de identificação claramente inválidos. Isso prejudica a qualidade dos dados e pode gerar problemas posteriores, mas não necessariamente impede o processamento técnico do pedido.

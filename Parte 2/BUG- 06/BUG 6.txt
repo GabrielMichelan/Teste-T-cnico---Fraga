@@ -21,3 +21,7 @@ O sistema aceita o CEP incompleto e permite que o usuário prossiga para as pró
 
 Resultado esperado:
 O sistema deve validar o formato do CEP informado e impedir o avanço do checkout enquanto o valor não estiver em um formato válido.
+
+Severidade: Média 
+Justificativa: Há uma falha clara de validação de dados, mas o impacto é mais restrito ao campo de endereço. O fluxo pode seguir com dados inválidos, porém o problema é menos abrangente que permitir um carrinho vazio ou ausência total de endereço.
+

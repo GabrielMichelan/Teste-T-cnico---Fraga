@@ -32,4 +32,13 @@ jobs:
         run: npm ci
 
       - name: Run API suite
-        run: npx cypress run --spec "api/**/*.cy.ts"
+        run: npx cypress run --spec "api/**/*.cy.ts" --reporter junit --reporter-options "mochaFile=results/api-[hash].xml,toConsole=true"
+
+      - name: Publish API test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-test-report
+          path: Parte 3/cypress/results/*.xml
+          if-no-files-found: warn
+          retention-days: 30

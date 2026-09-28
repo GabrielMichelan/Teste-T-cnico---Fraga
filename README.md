@@ -53,6 +53,10 @@ As validações cobrem:
 
 A suíte de API também contempla priorização P0, P1 e P2 e matriz de rastreabilidade.
 
+## Relatório da execução no CI
+
+O workflow **API tests** executa as specs de API em pushes e pull requests para `main` e pode ser iniciado manualmente. Ele gera um relatório JUnit XML por spec e publica os arquivos como artefato **api-test-report**, mesmo quando os testes falham. Para consultar: abra a aba **Actions** do repositório, selecione uma execução de **API tests** e baixe **api-test-report** na seção **Artifacts**. O artefato fica disponível por até 30 dias, conforme as configurações de retenção do repositório.
+
 ## Escopo dos testes E2E
 
 Os testes E2E acessam [SauceDemo](https://www.saucedemo.com/) e cobrem dois cenários:

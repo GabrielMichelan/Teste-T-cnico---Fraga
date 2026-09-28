@@ -1,16 +1,3 @@
-Severidade dos BUGs encontrados: 
-
-BUG 1 ->  Baixa (O login continua funcionando corretamente ao bloquear a autenticação inválida. O problema está na indicação visual incorreta do campo, podendo confundir o usuário, mas sem quebrar o fluxo de autenticação.) 
-BUG 2 -> Média (O catálogo continua acessível, porém a repetição contínua de produtos prejudica significativamente a navegação e pode dificultar a descoberta de itens reais. Não bloqueia a compra, mas afeta uma funcionalidade importante da listagem.)
-BUG 3 -> Alta (O checkout atribui um método de pagamento sem que o usuário tenha selecionado ou informado qualquer opção. Isso compromete a consistência de uma etapa essencial da compra e pode gerar informações incorretas sobre como a transação foi processada.)
-BUG 4 -> Alta (Para um produto físico, concluir a compra sem os dados necessários de entrega pode tornar o pedido inviável operacionalmente. O sistema aceita uma transação que potencialmente não pode ser atendida corretamente.)
-BUG 5 -> Alta (O sistema permite avançar em um fluxo de compra sem existir produto associado ao pedido. Isso quebra uma regra fundamental do checkout e pode gerar pedidos ou transações inconsistentes.)
-BUG 6 -> Média (Há uma falha clara de validação de dados, mas o impacto é mais restrito ao campo de endereço. O fluxo pode seguir com dados inválidos, porém o problema é menos abrangente que permitir um carrinho vazio ou ausência total de endereço.)
-BUG 7 -> Média (O sistema permite dados de identificação claramente inválidos. Isso prejudica a qualidade dos dados e pode gerar problemas posteriores, mas não necessariamente impede o processamento técnico do pedido.)
-BUG 8 -> Média (O campo aceita um valor completamente incompatível com um código postal e ainda permite concluir a compra. É uma falha de validação relevante, mas o impacto permanece concentrado na integridade do endereço informado.)
-BUG 9 -> Baixa (O comprovante continua sendo gerado e os dados principais da compra permanecem disponíveis. A divergência de horário causa inconsistência e pode gerar dúvida em auditoria ou rastreabilidade, mas não compromete o fluxo principal.)
-BUG 10 -> Baixa ( O problema afeta principalmente apresentação e experiência do usuário. Não impede navegação ou compra. Pode ser mais grave caso os termos revelem informações sensíveis da implementação, mas com o material atual o impacto aparenta ser visual/conteúdo.)
-
 
 | Prioridade de regressão | Bug | Por quê |
 |---|---|---|

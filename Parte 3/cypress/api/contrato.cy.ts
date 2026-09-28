@@ -32,7 +32,7 @@ describe('AC-CONTRATO | Contrato de payload e resposta', () => {
     })
   })
 
-  it('P1 | verifica comportamento ao enviar payload sem campo obrigatório', () => {
+  it('P1 | verifica comportamento ao enviar payload sem campo obrigatório', () => { // Bug encontrado aqui a API retorna 500 quando na verdade era pra retornar 400 ou 422
     const { firstname: _firstname, ...payloadIncompleto } =
       gerarReservaValida()
 

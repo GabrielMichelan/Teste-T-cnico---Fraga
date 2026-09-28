@@ -24,3 +24,7 @@ O sistema permite concluir a compra solicitando apenas o CEP, sem exigir as dema
 
 Resultado esperado:
 Para compras que necessitem de entrega física, o sistema deve solicitar e validar todas as informações necessárias para identificar corretamente o endereço de entrega antes de permitir a finalização do pedido.
+
+
+Severidade: Alta 
+Justificativa: Para um produto físico, concluir a compra sem os dados necessários de entrega pode tornar o pedido inviável operacionalmente. O sistema aceita uma transação que potencialmente não pode ser atendida corretamente.
